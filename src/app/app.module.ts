@@ -7,6 +7,7 @@ import { createCustomElement } from '@angular/elements';
 import {HttpClientModule} from '@angular/common/http';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoDetailsComponent } from './todo-details/todo-details.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,12 @@ import { TodoDetailsComponent } from './todo-details/todo-details.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:APP_BASE_HREF,
+      useValue:"/todos/"
+    }
+  ],
  //bootstrap: [AppComponent]
 })
 export class AppModule { 
