@@ -21,10 +21,10 @@ import { APP_BASE_HREF } from '@angular/common';
     HttpClientModule
   ],
   providers: [
-    // {
-    //   provide:APP_BASE_HREF,
-    //   useValue:"/todos/"
-    // }
+    {
+      provide:APP_BASE_HREF,
+      useValue:"/todos/"
+    }
   ],
  //bootstrap: [AppComponent]
 })
