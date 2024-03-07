@@ -24,7 +24,6 @@ spec:
          volumeMounts:
           - name: config-vol
             mountPath: "/usr/share/nginx/html/config"
-            readOnly: true
       volumes:
       - name: config-vol
         configMap:
