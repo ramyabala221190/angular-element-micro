@@ -13,3 +13,5 @@ services:
   prodAppPort: 8088
 
 environment: ""
+
+config: app-config
