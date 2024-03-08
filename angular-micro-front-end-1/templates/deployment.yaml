@@ -22,7 +22,7 @@ spec:
          ports:
           - containerPort : {{.Values.pod.containerPort}} #this should match the port nginx listening on
          volumeMounts:
-       -   name: config-vol
+         - name: config-vol
            mountPath: /usr/share/nginx/html/config
            readOnly: true
      volumes:
