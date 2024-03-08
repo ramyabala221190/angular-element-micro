@@ -4,6 +4,7 @@ pod:
  imageName: ""
  containerPort: 80
  volume: config-vol
+ mountPath: config
 
 services:
   name: "service"
