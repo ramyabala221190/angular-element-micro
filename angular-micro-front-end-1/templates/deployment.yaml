@@ -34,7 +34,7 @@ spec:
          name: {{.Values.environment}}-{{.Values.config.name}}
      - name : {{.Values.secret.volume}}
        secret:
-         secretName: {{.Values.environment}}-{{.Values.secret.name}}
+         secretName: {{.Values.secret.name}}
 #we are loading all environment variables from the config map with name :dev-app-config
 
 
