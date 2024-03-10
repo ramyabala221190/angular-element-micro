@@ -3,8 +3,6 @@ pod:
  containerName: "container"
  imageName: ""
  containerPort: 80
- volume: config-vol
- mountPath: config
 
 services:
   name: "service"
@@ -15,4 +13,15 @@ services:
 
 environment: ""
 
-config: app-config
+config:
+  name: app-config
+  volume: config-vol
+  mountPath: config
+
+secret:
+  name: firstsecret
+  volume: secret-vol
+  mountPath: secret
+
+
+
