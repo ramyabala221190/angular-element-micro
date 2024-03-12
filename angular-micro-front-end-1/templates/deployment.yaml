@@ -35,7 +35,10 @@ spec:
      - name : {{.Values.secret.volume}}
        secret:
          secretName: {{.Values.secret.name}}
-#we are loading all environment variables from the config map with name :dev-app-config
+
+# Secret created manually
+#C:\Users\User>kubectl create secret generic firstsecret --from-literal pwd=foo
+#secret/firstsecret created
 
 
 #helm install helm-release helm-test
