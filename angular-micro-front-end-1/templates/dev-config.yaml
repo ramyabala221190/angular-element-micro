@@ -1,10 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: dev-app-config
-
+  name: dev-app-micro-element-config
 data:
   env: "dev"
-  description: "Application is running in development environment on port 8086"
-
 

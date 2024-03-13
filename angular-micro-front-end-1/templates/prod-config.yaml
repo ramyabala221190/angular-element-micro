@@ -1,10 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: prod-app-config
+  name: prod-app-micro-element-config
 
 data:
   env: "prod"
-  description: "Application is running in production environment on port 8088"
-
 

@@ -1,10 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: uat-app-config
+  name: uat-app-micro-element-config
 
 data:
   env: "uat"
-  description: "Application is running in uat environment on port 8087"
-
 
