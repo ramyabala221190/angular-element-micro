@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: uat-app-micro-element-config
+  name: uat-app-micro-front-end-1-config
 
 data:
   env: {{.Values.environment}}
