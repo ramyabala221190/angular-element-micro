@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: common-app-micro-element-config
 data:
-  containerPort: {{.Values.pod.containerPort}}
+  containerPort: "{{.Values.pod.containerPort}}"
