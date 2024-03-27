@@ -4,5 +4,5 @@ metadata:
   name: prod-app-micro-element-config
 
 data:
-  env: "prod"
+  env: {{.Values.environment}}
 

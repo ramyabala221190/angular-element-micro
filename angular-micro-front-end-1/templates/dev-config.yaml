@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: dev-app-micro-element-config
 data:
-  env: "dev"
+  env: {{.Values.environment}}
 

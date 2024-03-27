@@ -1,4 +1,4 @@
-import { Injector, NgModule } from '@angular/core';
+import { APP_INITIALIZER, InjectionToken, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,7 +7,14 @@ import { createCustomElement } from '@angular/elements';
 import {HttpClientModule} from '@angular/common/http';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoDetailsComponent } from './todo-details/todo-details.component';
-import { APP_BASE_HREF } from '@angular/common';
+import { Observable } from 'rxjs';
+import { ConfigService } from './config.service';
+
+function appInitialization(envConfigLibService:ConfigService) :()=>Observable<any>{
+  return ()=>envConfigLibService.setConfigurationDetails() 
+}
+
+export const appName=new InjectionToken("appName");
 
 @NgModule({
   declarations: [
@@ -22,8 +29,14 @@ import { APP_BASE_HREF } from '@angular/common';
   ],
   providers: [
     {
-      provide:APP_BASE_HREF,
-      useValue:"/todos/"
+      provide:APP_INITIALIZER,
+      useFactory:appInitialization,
+      deps:[ConfigService],
+      multi:true
+    },
+    {
+      provide:appName,
+      useValue:"micro-front-end-1"
     }
   ],
  //bootstrap: [AppComponent]

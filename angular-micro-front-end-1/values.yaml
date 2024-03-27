@@ -9,14 +9,19 @@ pod:
 services:
   name: "service"
   type: NodePort  #due to external IP pending issue, changed from LoadBalancer to NodePort
-  devAppPort: 8086
-  uatAppPort: 8087
-  prodAppPort: 8088
-  nodeDevPort: 31508
+  app:
+   dev: 8086
+   uat: 8087
+   prod: 8088
+
+  node:
+    dev: 31508
+    uat: 31509
+    prod: 31510
 
 environment: ""
 
 config: 
-  name: app-micro-element-config
-  volume: app-micro-element-config-vol
+  name: app-micro-front-end-1-config
+  volume: app-micro-front-end-1-config-vol
   mountPath: config

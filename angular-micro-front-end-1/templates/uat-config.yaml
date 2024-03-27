@@ -4,5 +4,5 @@ metadata:
   name: uat-app-micro-element-config
 
 data:
-  env: "uat"
+  env: {{.Values.environment}}
 
