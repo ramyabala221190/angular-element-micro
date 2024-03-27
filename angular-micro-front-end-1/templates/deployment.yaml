@@ -29,16 +29,16 @@ spec:
            mountPath: /{{.Values.config.mountPath}}
            readOnly: true
          env:
-          - name: containerPort
-             valueFrom:
-               configMapKeyRef:
-                  name: common-{{.Values.config.name}}
-                  key: containerPort
-          - name: env
+           - name: env
              valueFrom:
                configMapKeyRef:
                   name: {{.Values.environment}}-{{.Values.config.name}}
                   key: env
+           - name: containerPort
+             valueFrom:
+               configMapKeyRef:
+                  name: common-{{.Values.config.name}}
+                  key: containerPort
      volumes:
      - name: {{.Values.config.volume}}
        configMap:
